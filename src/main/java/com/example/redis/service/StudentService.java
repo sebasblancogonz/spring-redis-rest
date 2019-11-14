@@ -12,7 +12,7 @@ public interface StudentService {
 
     List<Student> saveStudents(List<Student> students);
 
-    List<Student> students();
+    Optional<List<Student>> students();
 
     Optional<Student> student(String id);
 }

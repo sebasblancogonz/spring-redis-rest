@@ -26,8 +26,8 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<Student> students() {
-        return (List<Student>) studentRepository.findAll();
+    public Optional<List<Student>> students() {
+        return Optional.ofNullable((List<Student>) studentRepository.findAll());
     }
 
     @Override

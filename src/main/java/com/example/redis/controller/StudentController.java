@@ -24,7 +24,7 @@ public class StudentController {
 
     @GetMapping(value = "/", produces = "application/json")
     public List<Student> students() {
-        return this.studentService.students();
+        return this.studentService.students().orElse(null);
     }
 
     @PostMapping(value = "/", produces = "application/json")
